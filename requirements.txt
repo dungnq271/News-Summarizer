@@ -1,0 +1,30 @@
+openai
+streamlit
+streamlit_chat
+
+langchain
+langchain-openai
+langchain-pinecone
+langchain-community
+langchainhub
+
+selenium
+webdriver_manager
+selectolax
+beautifulsoup4
+lxml
+
+fastapi
+uvicorn
+python-dotenv
+ipykernel
+icecream
+
+# paddlepaddle
+# paddleocr
+# unstructured[image,pdf,docx,pptx]
+
+pre-commit
+black
+isort
+mypy
