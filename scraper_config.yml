@@ -1,0 +1,12 @@
+# Web that want to crawls (only support vnexpress now)
+webname: "vnexpress"
+
+#logger config file path
+logger_fpath: "src/logger/logger_config.yml"
+output_dpath: "result"
+
+# article_type: "all"
+article_type: "tin-moi-nhat"
+top_recent: 5
+summarize: true
+um_workers: 8
