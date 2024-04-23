@@ -1,4 +1,5 @@
 import os
+import time
 
 import yaml  # type: ignore
 from bs4 import NavigableString
@@ -20,3 +21,14 @@ def get_text_from_tag(tag):
 
     # else if isinstance(tag, Tag):
     return tag.text
+
+
+def calculate_time(func):
+    def timing(*args, **kwargs):
+        t1 = time.time()
+        outputs = func(*args, **kwargs)
+        t2 = time.time()
+        print(f"Time: {(t2-t1):.3f}s")
+        return outputs
+
+    return timing
