@@ -4,9 +4,14 @@ from typing import Optional
 
 class BaseScraper(ABC):
 
-    def __init__(self, save_dir, top_k, num_workers):
-        self.save_dir = save_dir
-        self.top_k = top_k
+    def __init__(
+        self,
+        output_dpath: str,
+        top_recent: Optional[int] = None,
+        num_workers: Optional[int] = 1,
+    ):
+        self.output_dpath = output_dpath
+        self.top_recent = top_recent
         self.num_workers = num_workers
 
     @abstractmethod
