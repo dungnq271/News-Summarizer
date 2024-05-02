@@ -51,11 +51,15 @@ class VnExpressScraper(BaseScraper):
             self.logger.info(f"Title tag does no match in {url}...")
             title = None
 
-        description = (
-            get_text_from_tag(p)
-            for p in soup.find("p", class_="description").contents
-        )
-        description = "\n\n".join(description)
+        try:
+            description = (
+                get_text_from_tag(p)
+                for p in soup.find("p", class_="description").contents
+            )
+            description = "\n\n".join(description)
+        except AttributeError:
+            self.logger.info(f"Description tags does no match in {url}...")
+            description = None
 
         try:
             paragraphs = (
