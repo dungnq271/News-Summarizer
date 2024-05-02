@@ -3,6 +3,8 @@ import re
 import pandas as pd
 import streamlit as st
 
+from src.utils import utils
+
 
 def display_headings():
     st.set_page_config(page_title="News Hub", layout="wide")
@@ -20,14 +22,16 @@ def display_news(df: pd.DataFrame):
         for col in cols:
             text = news_dict[col][i]
             text_clean = re.sub(r"\n+", ", ", text)
-            if i == 0 and col == "Description":
-                print(text)
-                print(text_clean)
+            # if i == 0 and col == "Description":
+            #     print(text)
+            #     print(text_clean)
             st.write(f"**{col}**:\n" + text_clean)
         st.divider()
 
 
 if __name__ == "__main__":
     display_headings()
-    df = pd.read_csv("./result/tin-moi-nhat.csv")
+    config = utils.get_config("scraper_config.yml")
+    article_type = config["article_type"]
+    df = pd.read_csv(f"./result/{article_type}.csv")
     display_news(df)
