@@ -24,8 +24,7 @@ def main(config_fpath):
     # Summarizer setup
     if config["summarize"]:
         llm = ChatOpenAI(
-            temperature=0,
-            # openai_api_key=openai_api_key,
+            temperature=0.1,
             max_tokens=1000,
             model="gpt-3.5-turbo",
         )
