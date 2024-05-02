@@ -15,3 +15,6 @@ $ pip install -r requirements.txt
 ## Running
 - Edit the [config file](./scraper_config.yml). You can change the `article_type` variable to the channel you want to scrape the news in [VnExpress RSS web page](https://vnexpress.net/rss). In this repo, the `article_type` is set to `tin-moi-nhat` to scrape the contents from [https://vnexpress.net/rss/tin-moi-nhat.rss](https://vnexpress.net/rss/tin-moi-nhat.rss). It's that simple.
 - Run the script: `sh run.sh` (Maybe you have to add execute permission to this file).
+
+## Reference
+This project was inspired by [VNNewsCrawler](https://github.com/egliette/VNNewsCrawler).
