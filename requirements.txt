@@ -1,10 +1,8 @@
 openai
 streamlit
-streamlit_chat
 
 langchain
 langchain-openai
-langchain-pinecone
 langchain-community
 langchainhub
 
@@ -19,10 +17,6 @@ uvicorn
 python-dotenv
 ipykernel
 icecream
-
-# paddlepaddle
-# paddleocr
-# unstructured[image,pdf,docx,pptx]
 
 pre-commit
 black
